@@ -13,8 +13,8 @@
 
 html,
 body {
-  background-color: var(--secondary);
-  color: var(--primary);
+  background-color: #000;
+  color: var(--secondary);
   image-rendering: -webkit-optimize-contrast;
   scroll-behavior: smooth;
 
