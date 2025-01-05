@@ -1,6 +1,5 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid2";
 import Stack from "@mui/material/Stack";
@@ -12,6 +11,7 @@ import SettingsSuggestRoundedIcon from "@mui/icons-material/SettingsSuggestRound
 import SupportAgentRoundedIcon from "@mui/icons-material/SupportAgentRounded";
 import ThumbUpAltRoundedIcon from "@mui/icons-material/ThumbUpAltRounded";
 import style from "./Highlights.module.css";
+import imgUrl from "../../assets/satka.png";
 
 const items = [
   {
@@ -77,6 +77,7 @@ const Highlights = () => {
             textAlign: { sm: "left", md: "center" },
           }}
         >
+          <img src={`${imgUrl}`} width={"200px"} />
           <Typography
             component="h2"
             variant="h4"

@@ -9,7 +9,6 @@ import { NavLink } from "react-router";
 import Sponsors from "../../components/Sponsors/Sponsors";
 import Highlights from "../../components/Highlights/Highlights";
 import Gallery from "../../components/Gallery/Gallery";
-import Footer from "components/Footer/Footer";
 
 const LandingPage = () => {
   return (
@@ -93,7 +92,6 @@ const LandingPage = () => {
       <Sponsors />
       <Highlights />
       <Gallery />
-      <Footer />
     </div>
   );
 };

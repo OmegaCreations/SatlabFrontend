@@ -2,7 +2,7 @@ import * as React from "react";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
-import { Facebook, Instagram, Twitter } from "@mui/icons-material";
+import { Facebook, Instagram, LinkedIn, X } from "@mui/icons-material";
 import { Box, Stack } from "@mui/material";
 
 const Footer = () => {
@@ -35,24 +35,46 @@ const Footer = () => {
               Skontaktuj się
             </Typography>
             <Typography variant="body2">
-              123 Main Street, Anytown, USA
+              al. Adama Mickiewicza 30, 30-059 Kraków
             </Typography>
-            <Typography variant="body2">Email: info@example.com</Typography>
-            <Typography variant="body2">Phone: +1 234 567 8901</Typography>
+            <Typography variant="body2">satlab@agh.edu.pl</Typography>
           </Box>
           <Box>
             <Typography variant="h6" color="#0ebcbb" gutterBottom>
               Zaobserwuj nas
             </Typography>
             <Stack direction="row" spacing={2}>
-              <Link href="https://www.facebook.com/" color="inherit">
+              <Link
+                href="https://www.facebook.com/satlab.agh"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="inherit"
+              >
                 <Facebook />
               </Link>
-              <Link href="https://www.instagram.com/" color="inherit">
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/satlab_agh/"
+                color="inherit"
+              >
                 <Instagram />
               </Link>
-              <Link href="https://www.twitter.com/" color="inherit">
-                <Twitter />
+              <Link
+                href="https://x.com/satlabagh"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="inherit"
+              >
+                <X />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/company/satlab-agh"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="inherit"
+              >
+                <LinkedIn />
               </Link>
             </Stack>
           </Box>
