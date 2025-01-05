@@ -12,6 +12,8 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import style from "./Navbar.module.css";
 import { NavLink } from "react-router";
+import React from "react";
+import logoUrl from "@/assets/logo.png";
 
 const pages = ["Strona Główna", "O nas", "Kontakt"];
 const pagesLinks = ["", "about", "contact"];
@@ -45,7 +47,7 @@ const Navbar = () => {
               textDecoration: "none",
             }}
           >
-            LOGO
+            SATLAB AGH
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -92,7 +94,7 @@ const Navbar = () => {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <img src={logoUrl} style={{ width: "30px", marginRight: "20px" }} />
           <Typography
             variant="h5"
             noWrap
@@ -108,7 +110,7 @@ const Navbar = () => {
               textDecoration: "none",
             }}
           >
-            LOGO
+            SATLAB AGH
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page, idx) => (

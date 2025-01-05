@@ -121,7 +121,7 @@ const About = () => {
 
       <Stack
         spacing={4}
-        direction={{ xs: "column", sm: "row" }}
+        direction={{ xs: "column", md: "row" }}
         useFlexGap
         flexWrap="wrap"
         justifyContent="center"
@@ -130,7 +130,7 @@ const About = () => {
         {teams.map((team, index) => (
           <Card
             key={index}
-            sx={{ width: { xs: "100%", sm: "30%" }, height: "100%" }}
+            sx={{ width: { xs: "100%", md: "40%" }, height: "100%" }}
           >
             <CardMedia
               component="img"
