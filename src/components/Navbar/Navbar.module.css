@@ -1,0 +1,25 @@
+.navbar {
+  width: 100%;
+  background-color: var(--blue1) !important;
+}
+
+.navItem {
+  color: var(--secondary) !important;
+  transition: 0.3s ease;
+}
+
+.navItem p {
+  color: var(--secondary) !important;
+}
+
+.navItemSx p {
+  color: var(--primary);
+}
+
+.active {
+  background-color: var(--secondary);
+}
+
+.active p {
+  color: var(--blue1) !important;
+}
