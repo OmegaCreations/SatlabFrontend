@@ -12,6 +12,7 @@ import SupportAgentRoundedIcon from "@mui/icons-material/SupportAgentRounded";
 import ThumbUpAltRoundedIcon from "@mui/icons-material/ThumbUpAltRounded";
 import style from "./Highlights.module.css";
 import imgUrl from "../../assets/satka.png";
+import { useNavigate } from "react-router";
 
 const items = [
   {
@@ -53,6 +54,8 @@ const items = [
 ];
 
 const Highlights = () => {
+  const navigate = useNavigate();
+
   return (
     <Box
       sx={{
@@ -97,7 +100,11 @@ const Highlights = () => {
         </Box>
         <Grid container spacing={2}>
           {items.map((item, index) => (
-            <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
+            <Grid
+              size={{ xs: 12, sm: 6, md: 4 }}
+              key={index}
+              onClick={() => navigate(`/article/${index}`)}
+            >
               <Stack direction="column" useFlexGap className={style.articleBox}>
                 <div>
                   <h3>{item.title}</h3>

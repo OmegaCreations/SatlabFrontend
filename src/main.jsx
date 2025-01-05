@@ -7,7 +7,8 @@ import LandingPage from "./pages/LandingPage/LandingPage";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import React from "react";
-import Footer from "components/Footer/Footer";
+import Footer from "@/components/Footer/Footer";
+import Article from "@/pages/Article/Article";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -26,10 +27,11 @@ createRoot(document.getElementById("root")).render(
           <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/article/:id" element={<Article />} />
           {/* 
           
           <Route path="/resources" element={<Resources />} />
-          <Route path="/article/:id" element={<Article />} /> */}
+           */}
         </Routes>
       </main>
       <footer>
