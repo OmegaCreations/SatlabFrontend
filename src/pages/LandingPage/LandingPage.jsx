@@ -49,7 +49,7 @@ const LandingPage = () => {
                 },
               })}
             >
-              Tak&nbsp;jest&nbsp;
+              We can into&nbsp;
               <Typography
                 component="span"
                 variant="h1"
@@ -58,7 +58,7 @@ const LandingPage = () => {
                 }}
                 style={{ color: "#0ebcbb" }}
               >
-                lecimy&nbsp;w&nbsp;kosmos!
+                space!
               </Typography>
             </Typography>
 
@@ -69,9 +69,14 @@ const LandingPage = () => {
               }}
               style={{ color: "#f7f7f7" }}
             >
-              Explore our cutting-edge dashboard, delivering high-quality
-              solutions tailored to your needs. Elevate your experience with
-              top-tier features and services.
+              Your satellite enthusiasts since 2022! SatLab is a team of space-
+              and satellite lovers developing the smallest Polish satellite -
+              HYPE. Its uniqueness relies on a combination of the display and
+              payload - camera, allowing it to take picturesque selfies with
+              self-chosen images uploaded to space in the background of the
+              Earth. With this project, and others soon to come, we want to
+              contribute to students’ and country’s development of the space
+              sector and share our excitement with others!
             </Typography>
             <Stack
               spacing={1}
@@ -83,7 +88,7 @@ const LandingPage = () => {
                 style={{ backgroundColor: "#0ebcbb" }}
                 sx={{ minWidth: "fit-content" }}
               >
-                <NavLink to={"/contact"}>Skontaktuj się z nami!</NavLink>
+                <NavLink to={"/contact"}>Contact with us!</NavLink>
               </Button>
             </Stack>
           </Stack>

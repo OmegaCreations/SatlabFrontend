@@ -90,12 +90,11 @@ const Highlights = () => {
               letterSpacing: "5px",
             }}
           >
-            Nasze artykuły
+            Our articles
           </Typography>
           <Typography variant="body1" sx={{ color: "grey.400" }}>
-            Explore why our product stands out: adaptability, durability,
-            user-friendly design, and innovation. Enjoy reliable customer
-            support and precision in every detail.
+            Explore why our actions stand out: adaptability, durability, and
+            innovation. Read our articles to learn more about our journey.
           </Typography>
         </Box>
         <Grid container spacing={2}>

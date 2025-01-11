@@ -111,12 +111,10 @@ const Gallery = () => {
               color: "#0ebcbb",
             }}
           >
-            Zobacz nas
+            Now you can see us
           </Typography>
           <Typography variant="body1" sx={{ color: "#1c1c1c" }}>
-            Explore why our product stands out: adaptability, durability,
-            user-friendly design, and innovation. Enjoy reliable customer
-            support and precision in every detail.
+            Look around and see our work and team.
           </Typography>
         </Box>
         <ImageList variant="masonry" cols={3} gap={8}>

@@ -15,7 +15,7 @@ import { NavLink } from "react-router";
 import React from "react";
 import logoUrl from "@/assets/logo.png";
 
-const pages = ["Strona Główna", "O nas", "Kontakt"];
+const pages = ["Dashboard", "About us", "Contact"];
 const pagesLinks = ["", "about", "contact"];
 
 const Navbar = () => {
@@ -126,6 +126,18 @@ const Navbar = () => {
                 </Button>
               </NavLink>
             ))}
+
+            <NavLink
+              target="_blank"
+              to={`https://wiki.satlab.agh.edu.pl/s/docs`}
+              className={({ isActive }) =>
+                isActive ? `${style.active} ${style.navItem}` : style.navItem
+              }
+            >
+              <Button onClick={handleCloseNavMenu}>
+                <p>Documentation</p>
+              </Button>
+            </NavLink>
           </Box>
         </Toolbar>
       </Container>

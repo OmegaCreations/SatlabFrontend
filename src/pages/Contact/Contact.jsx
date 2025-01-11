@@ -25,12 +25,13 @@ const Contact = () => {
         gutterBottom
         sx={{ fontWeight: 900, color: "#f7f7f7", letterSpacing: "5px" }}
       >
-        Skontaktuj się z nami
+        Contact with us!
       </Typography>
 
       <div>
         <Typography variant="body1" align="center" paragraph>
-          Masz pytania? Skontaktuj się z nami pod adresem:
+          If you have business inquiries or other questions, please contact us
+          at:
         </Typography>
 
         <Typography variant="h5" align="center" sx={{ fontWeight: 500, mb: 4 }}>
@@ -82,16 +83,17 @@ const Contact = () => {
       </Box>
       <div>
         <Typography variant="body1" align="center">
-          Zasoby zawierają logotypy i zdjęcia do użytku promocyjnego.
+          Resources contain logotypes and photos to promotional use.
         </Typography>
         <Box sx={{ display: "flex", justifyContent: "center", mt: 6 }}>
           <Button
             variant="contained"
-            href="/downloads/resources.zip"
+            target="_blank"
+            href="https://drive.google.com/drive/folders/1m3XWMPyB9qua7BJcUK8dTMzpjnew58r1"
             download
             style={{ backgroundColor: "#0ebcbb" }}
           >
-            Pobierz zasoby
+            Download resources
           </Button>
         </Box>
       </div>

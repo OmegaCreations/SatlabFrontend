@@ -18,78 +18,70 @@ import imgOBS from "../../assets/obs.jpg";
 import imgElektronika from "../../assets/elektronika.jpg";
 import imgMechanika from "../../assets/mechanika.png";
 import imgPR from "../../assets/pr.png";
+import imgSatlab from "../../assets/satka.png";
 
 const teams = [
   {
+    title: "SATLAB AGH",
+    description: `We are SatLab AGH - students’ team operating under the Space Technology Centre at AGH University of Krakow. Since 2022 we have been working on the HYPE project. 
+
+HYPE is a Polish 1p PocketQube satellite, developed and assembled entirely in-house by our team. It measures 5x5x5 cm, which makes it the smallest Polish satellite to date.
+
+The satellite’s primary payload is a one-of-a-kind “selfie-stick,” featuring a camera module mounted on a deployable boom. This camera faces a 240×240 LCD screen that displays images uploaded from the ground station. By showcasing those images in orbit, the team seeks to inspire and amplify educational efforts that highlight the accessibility of space.
+
+In addition to its photographic capabilities, HYPE carries a miniature near-infrared (NIR) spectrometer operating in the 640–1050 nm range. This instrument enables experimental, large-area mosaic spectrometry of Earth’s surface, enabling monitoring of light pollution, tropical forests and volcanic eruptions.
+
+The main goal of the HYPE mission is to highlight the potential of student-driven space initiatives and establish a foundation for future satellite projects at AGH University. The name “HYPE” encapsulates the team’s enthusiasm and ambition to spark excitement, inspire others and show that space is within reach.
+
+Stay tuned for more projects! They are coming soon...
+`,
+    image: imgSatlab,
+  },
+  {
     title: "Payload",
-    description: `To zespół zajmujący się załadunkiem satelity, odpowiada za techniczny rozwój, kontrolę i obsługę podzespołów pełniących misje na orbicie.
-
-W przypadku satelity HYPE moduły funkcjonalne to miniaturowy spektroskop NIR, kamera z selfie-stickiem oraz ekran. Każdy z modułów przechodzi fazę testów i kalibracji przygotowujących je do pracy w warunkach pozaziemskich.
-
-Zespół payload-u czuwa również nad odpowiednią interpretacją pozyskanych danych badawczych.`,
+    description: `The heart of the mission! Whether it’s taking selfies with the camera mounted on a flex cable or analysing the Earth’s surface with a tiny spectrometer, the Payload team designs and integrates the satellite’s most mission-critical instruments.`,
     image: imgPayload,
   },
   {
-    title: "Communications",
-    description: `
-Są odpowiedzialni za opracowywanie technik łączności z satelitą. W trakcie trwania projektu, zaimplementowali schemat wielodostępu do łącza przy użyciu modulacji LoRa.
-
-W plan ich działań wpisuje się również stworzenie stacji naziemnej złożonej z anten dla pasma UHF (~400MHz) oraz anteny pasma S (2~ 4 GHz).
-
-W ramach sekcji integrujemy RF Hardware dostarczony przez sekcję Elektroniki z software’em napisanym przez OBSW.
-
-Poprzez pisanie oprogramowania do obsługi logiki linku oraz niskopoziomowej obsługi zainstalowanego w satelicie transceivera.`,
+    title: "COMMS (Communications)",
+    description: `Our hotline to space! The COMMS team crafts robust radio links using LoRa and FSK modulation for high-speed data downlinks. They make sure that all the bytes of telemetry, photos and instructions are sent back and forth clear as day.`,
     image: imgCommunications,
   },
   {
     title: "Software",
-    description: `Zespół Software zajmuje się utworzeniem oprogramowania do kontroli misji (satelity) z poziomu interfejsu użytkownika w aplikacji webowej.
-
-Dba o architekturę oprogramowania działającego w tle na serwerach na ziemi, która pozwoli nam na skrupulatne sprawdzanie stanu satelity poprzez logi wyświetlane w webowej aplikacji.
-
-Aplikacja będzie zapewniała podgląd danych. Spora większość pracy dzieje się poza kulisami i jest związana bezpośrednio z back-endem, który ma za zadanie obsługiwać dane, które będziemy dostawać, zaczynając od zapisu do baz danych, przechodząc przez odpowiednie sprasowanie ich, aż do momentu wyświetlenia na stronie.`,
+    description: `Bringing the satellite to life! This team develops the brains of the mission with custom code, managing everything from memory allocation to precise service-based architecture. They make sure our single microcontroller can handle everything from selfies to spectroscopic data.`,
     image: imgSoftware,
   },
   {
-    title: "ADCS",
-    description: `Attitude Determination and Control System – są odpowiedzialna za określanie i kontrolę położenia przestrzennego satelity. Wykorzystując zmienne pole magnetyczne na niskiej orbicie okołoziemskiej oraz specjalne cewki umieszczone w ścianach satelity.
-
-Starają się zmniejszyć prędkość obrotową satelity, uzyskując tym samym pewien stopień kontroli nad orientacją.
-
-Ma to znaczenie przede wszystkim dla wykonywanych przez spektroskop pomiarów — do przeprowadzenia pełnej analizy zebranych danych naukowych, potrzebna jest informacja o orientacji satelity względem Ziemi, by określić, w który punkt na powierzchni skierowany był instrument. Pozwoli to także na wykonywanie zdjęć kamerą selfie w momencie, gdy w tle widoczna będzie Ziemia.`,
+    title: "ADCS (Attitude Determination and Control System)",
+    description: `Keeping the satellite steady! ADCS combines magnetorquers, MEMS gyroscopes, and light sensors to control and monitor orientation. This team ensures that the satellite does not spin uncontrollably and points in the right way, whether for communication, selfies or spectroscopic measurements.`,
     image: imgADCS,
   },
   {
-    title: "OBS",
-    description: `Zajmują się tworzeniem oprogramowania dla komputera pokładowego satelity. Komputer pokładowy łączy ze sobą wszystkie zewnętrzne komponenty, komunikuje je ze sobą, zarządza nimi, przez co można go porównać do ludzkiego mózgu, jako takiego centrum dowodzenia całym organizmem. Software rozwijamy na platformie STM32 używając C++ I bazując na systemie czasu rzeczywistego freeRTOS.
-
-Każdy zewnętrzny komponent zgrupowany jest w tak zwane „zadanie”, naszą rolą jest napisanie konkretnych funkcji obsługujących dany komponent i kolejno synchronizacja zadań między sobą oraz ich wspólna komunikacja. Tak więc jednym z naszych zobowiązań jest pisanie sterowników dla urządzeń zewnętrznych (takich jak na przykład czujnik temperatury, kamera czy czujnik przemieszczenia) tak, abyśmy byli w stanie zintegrować je z procesorem`,
+    title: "OBSW (On-Board Software)",
+    description: `The satellite's inner voice! Team ensures that all the subsystems work together seamlessly, using FreeRTOS to coordinate tasks, data routing, and critical decision-making- all in real time, even 500 km above Earth.`,
     image: imgOBS,
   },
   {
-    title: "Elektronika",
-    description: `Zespół elektroniki odpowiedzialny jest za stworzenie układów elektronicznych spełniających założenie misji, w naszym przypadku jest to wykonywanie zdjęć na tle ziemi oraz dokonywanie różnego rodzaju pomiarów przy pomocy spektroskopu.
-
-Hype składa się z płytek drukowanych PCB takich jak:
-
-Core Board - jest to główna płytka w całej satelicie zawierająca sekcję zasilania, sekcję komunikacji oraz sekcję kontrolno-sterującą gdzie znajduje się mikrokontroler, czyli mózg całej satelity
-Payload - jest to płytka umożliwiająca poprawną pracę kamery, wyświetlacza oled oraz spektroskopu
-Side Panels - są to płytki znajdujące się na ścianach bocznych satelity. Zawierają m.in. ogniwa słoneczne, które generują energię elektryczną oraz cewki umożliwiające obrót satelity.`,
+    title: "Electronics",
+    description: `Powering the mission! From PCB panels to DC/DC converters, this team builds the circuitry that keeps the satellite powered and operational. They ensure that every voltage line is protected, stable, and ready to perform in the harsh environment of space.`,
     image: imgElektronika,
   },
   {
-    title: "Mechanika",
-    description: `Zadaniem działu mechaniki jest projektowanie elementów strukturalnych aparatury laboratoryjnej oraz satelity.
-
-Od pomysłu, przez projekt, zamówienie i koordynowanie wytworzenia potrzebnej części, dbamy o to, by wszystkie komponenty innych działów trzymały się na swoim miejscu i wytrzymały trudne warunki na orbicie.`,
+    title: "Mechanics",
+    description: `Crafting the skeleton of our satellite! This team makes sure that every panel, bolt, and cage element is sturdy, lightweight, and ready to withstand its journey into space. They're the architects behind the spacecraft’s structure.`,
     image: imgMechanika,
   },
   {
-    title: "Promocja i organizacja",
-    description: `To dynamiczny zespół, którego głównym celem jest budowanie pozytywnego wizerunku naszego Koła w środowisku akademickim i poza nim.
-
-Ich działalność skupia się na szerzeniu wiedzy o naszych projektach, osiągnięciach i inicjatywach, a także na angażowaniu zarówno członków Koła, jak i szerszej społeczności w nasze działania. Organizują wydarzenia, prowadzą prelekcje oraz wiele, wieeele innych!`,
+    title: "PR+ORG (Public Relations and Organization)",
+    description: `Our storytellers and logistics! They turn our technical triumphs into accessible narratives. They run workshops, manage social media, and connect with the public. This team ensures the world knows why our satellite is important and how it’s making a difference.`,
     image: imgPR,
+  },
+  {
+    title: "Thermal",
+    description:
+      "Cool under pressure- literally! This team carries out simulations and makes adjustments to ensure that everything is kept at just the right temperature.",
+    image: imgSatlab,
   },
 ];
 

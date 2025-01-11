@@ -23,16 +23,16 @@ const Footer = () => {
         >
           <Box>
             <Typography variant="h6" color="#0ebcbb" gutterBottom>
-              O nas
+              About us
             </Typography>
             <Typography variant="body2">
-              We are XYZ company, dedicated to providing the best service to our
-              customers.
+              SatLab is a team of space- and satellite lovers developing the
+              smallest Polish satellite - HYPE.
             </Typography>
           </Box>
           <Box>
             <Typography variant="h6" color="#0ebcbb" gutterBottom>
-              Skontaktuj się
+              Contact
             </Typography>
             <Typography variant="body2">
               al. Adama Mickiewicza 30, 30-059 Kraków
@@ -41,7 +41,7 @@ const Footer = () => {
           </Box>
           <Box>
             <Typography variant="h6" color="#0ebcbb" gutterBottom>
-              Zaobserwuj nas
+              Follow us
             </Typography>
             <Stack direction="row" spacing={2}>
               <Link
