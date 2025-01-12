@@ -1,60 +1,35 @@
-import * as React from "react";
+import React, { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid2";
+import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import AutoFixHighRoundedIcon from "@mui/icons-material/AutoFixHighRounded";
-import ConstructionRoundedIcon from "@mui/icons-material/ConstructionRounded";
-import QueryStatsRoundedIcon from "@mui/icons-material/QueryStatsRounded";
-import SettingsSuggestRoundedIcon from "@mui/icons-material/SettingsSuggestRounded";
-import SupportAgentRoundedIcon from "@mui/icons-material/SupportAgentRounded";
-import ThumbUpAltRoundedIcon from "@mui/icons-material/ThumbUpAltRounded";
 import style from "./Highlights.module.css";
 import imgUrl from "../../assets/satka.png";
 import { useNavigate } from "react-router";
 
-const items = [
-  {
-    icon: <SettingsSuggestRoundedIcon />,
-    title: "Adaptable performance",
-    description:
-      "Our product effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks.",
-  },
-  {
-    icon: <ConstructionRoundedIcon />,
-    title: "Built to last",
-    description:
-      "Experience unmatched durability that goes above and beyond with lasting investment.",
-  },
-  {
-    icon: <ThumbUpAltRoundedIcon />,
-    title: "Great user experience",
-    description:
-      "Integrate our product into your routine with an intuitive and easy-to-use interface.",
-  },
-  {
-    icon: <AutoFixHighRoundedIcon />,
-    title: "Innovative functionality",
-    description:
-      "Stay ahead with features that set new standards, addressing your evolving needs better than the rest.",
-  },
-  {
-    icon: <SupportAgentRoundedIcon />,
-    title: "Reliable support",
-    description:
-      "Count on our responsive customer support, offering assistance that goes beyond the purchase.",
-  },
-  {
-    icon: <QueryStatsRoundedIcon />,
-    title: "Precision in every detail",
-    description:
-      "Enjoy a meticulously crafted product where small touches make a significant impact on your overall experience.",
-  },
-];
-
 const Highlights = () => {
   const navigate = useNavigate();
+  const [articles, setArticles] = useState([]);
+
+  useEffect(() => {
+    const fetchArticles = async () => {
+      try {
+        const response = await fetch("http://localhost:8080/api/articles", {
+          method: "GET",
+        });
+        if (!response.ok) {
+          throw new Error("Failed to fetch articles");
+        }
+        const data = await response.json();
+        setArticles(data);
+      } catch (error) {
+        console.error("Error fetching articles:", error);
+      }
+    };
+
+    fetchArticles();
+  }, []);
 
   return (
     <Box
@@ -80,7 +55,7 @@ const Highlights = () => {
             textAlign: { sm: "left", md: "center" },
           }}
         >
-          <img src={`${imgUrl}`} width={"200px"} />
+          <img src={`${imgUrl}`} width={"200px"} alt="Logo" />
           <Typography
             component="h2"
             variant="h4"
@@ -98,20 +73,31 @@ const Highlights = () => {
           </Typography>
         </Box>
         <Grid container spacing={2}>
-          {items.map((item, index) => (
-            <Grid
-              size={{ xs: 12, sm: 6, md: 4 }}
-              key={index}
-              onClick={() => navigate(`/article/${index}`)}
-            >
-              <Stack direction="column" useFlexGap className={style.articleBox}>
-                <div>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                </div>
-              </Stack>
-            </Grid>
-          ))}
+          {articles ? (
+            articles.map((article) => (
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                md={4}
+                key={article.id}
+                onClick={() => navigate(`/article/${article.id}`)}
+              >
+                <Stack
+                  direction="column"
+                  useFlexGap
+                  className={style.articleBox}
+                >
+                  <div>
+                    <h3>{article.title}</h3>
+                    <p>{article.description}</p>
+                  </div>
+                </Stack>
+              </Grid>
+            ))
+          ) : (
+            <h1>No articles yet.</h1>
+          )}
         </Grid>
       </Container>
     </Box>
