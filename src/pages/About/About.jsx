@@ -10,14 +10,6 @@ import {
   Stack,
 } from "@mui/material";
 
-import imgPayload from "../../assets/payload.jpg";
-import imgCommunications from "../../assets/communications.png";
-import imgSoftware from "../../assets/software.jpg";
-import imgADCS from "../../assets/adcs.jpg";
-import imgOBS from "../../assets/obs.jpg";
-import imgElektronika from "../../assets/elektronika.jpg";
-import imgMechanika from "../../assets/mechanika.png";
-import imgPR from "../../assets/pr.png";
 import imgSatlab from "../../assets/satka.png";
 
 const teams = [
@@ -35,52 +27,6 @@ The main goal of the HYPE mission is to highlight the potential of student-drive
 
 Stay tuned for more projects! They are coming soon...
 `,
-    image: imgSatlab,
-  },
-  {
-    title: "Payload",
-    description: `The heart of the mission! Whether it’s taking selfies with the camera mounted on a flex cable or analysing the Earth’s surface with a tiny spectrometer, the Payload team designs and integrates the satellite’s most mission-critical instruments.`,
-    image: imgPayload,
-  },
-  {
-    title: "COMMS (Communications)",
-    description: `Our hotline to space! The COMMS team crafts robust radio links using LoRa and FSK modulation for high-speed data downlinks. They make sure that all the bytes of telemetry, photos and instructions are sent back and forth clear as day.`,
-    image: imgCommunications,
-  },
-  {
-    title: "Software",
-    description: `Bringing the satellite to life! This team develops the brains of the mission with custom code, managing everything from memory allocation to precise service-based architecture. They make sure our single microcontroller can handle everything from selfies to spectroscopic data.`,
-    image: imgSoftware,
-  },
-  {
-    title: "ADCS (Attitude Determination and Control System)",
-    description: `Keeping the satellite steady! ADCS combines magnetorquers, MEMS gyroscopes, and light sensors to control and monitor orientation. This team ensures that the satellite does not spin uncontrollably and points in the right way, whether for communication, selfies or spectroscopic measurements.`,
-    image: imgADCS,
-  },
-  {
-    title: "OBSW (On-Board Software)",
-    description: `The satellite's inner voice! Team ensures that all the subsystems work together seamlessly, using FreeRTOS to coordinate tasks, data routing, and critical decision-making- all in real time, even 500 km above Earth.`,
-    image: imgOBS,
-  },
-  {
-    title: "Electronics",
-    description: `Powering the mission! From PCB panels to DC/DC converters, this team builds the circuitry that keeps the satellite powered and operational. They ensure that every voltage line is protected, stable, and ready to perform in the harsh environment of space.`,
-    image: imgElektronika,
-  },
-  {
-    title: "Mechanics",
-    description: `Crafting the skeleton of our satellite! This team makes sure that every panel, bolt, and cage element is sturdy, lightweight, and ready to withstand its journey into space. They're the architects behind the spacecraft’s structure.`,
-    image: imgMechanika,
-  },
-  {
-    title: "PR+ORG (Public Relations and Organization)",
-    description: `Our storytellers and logistics! They turn our technical triumphs into accessible narratives. They run workshops, manage social media, and connect with the public. This team ensures the world knows why our satellite is important and how it’s making a difference.`,
-    image: imgPR,
-  },
-  {
-    title: "Thermal",
-    description:
-      "Cool under pressure- literally! This team carries out simulations and makes adjustments to ensure that everything is kept at just the right temperature.",
     image: imgSatlab,
   },
 ];
@@ -108,7 +54,7 @@ const About = () => {
         gutterBottom
         sx={{ fontWeight: 600 }}
       >
-        O nas
+        About us
       </Typography>
 
       <Stack
@@ -147,7 +93,7 @@ const About = () => {
         ))}
       </Stack>
 
-      <Typography
+      {/* <Typography
         variant="h4"
         align="center"
         gutterBottom
@@ -183,7 +129,7 @@ const About = () => {
             </CardContent>
           </Card>
         ))}
-      </Stack>
+      </Stack> */}
     </Container>
   );
 };

@@ -2,16 +2,17 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import React from "react";
+import mediaSponsor from "../../../src/assets/partner.png";
+import mediaSponsor2 from "../../../src/assets/partner2.png";
 
-const whiteLogos = [
-  "https://static.wikia.nocookie.net/logopedia/images/6/62/TVN_Grupa_Discovery.svg/revision/latest?cb=20240304163853&path-prefix=uk",
-];
+const whiteLogos = [mediaSponsor, mediaSponsor2];
 
 const logoStyle = {
-  width: "100px",
-  height: "80px",
-  margin: "0 32px",
-  opacity: 0.7,
+  width: "auto",
+  height: "100px",
+  margin: "32px 32px",
+  opacity: 1,
+  filter: "grayscale(1)",
 };
 
 const Sponsors = () => {

@@ -9,6 +9,7 @@ import Contact from "./pages/Contact/Contact";
 import React from "react";
 import Footer from "@/components/Footer/Footer";
 import Article from "@/pages/Article/Article";
+import Teams from "@/pages/Teams/Teams";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -26,6 +27,7 @@ createRoot(document.getElementById("root")).render(
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<About />} />
+          <Route path="/teams" element={<Teams />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/article/:id" element={<Article />} />
           {/* 

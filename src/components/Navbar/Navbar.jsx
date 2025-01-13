@@ -15,8 +15,8 @@ import { NavLink } from "react-router";
 import React from "react";
 import logoUrl from "@/assets/logo.png";
 
-const pages = ["Dashboard", "About us", "Contact"];
-const pagesLinks = ["", "about", "contact"];
+const pages = ["Dashboard", "About us", "Teams", "Contact"];
+const pagesLinks = ["", "about", "teams", "contact"];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
